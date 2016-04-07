@@ -14,7 +14,8 @@
 #endif
    import UIKit
 
-    @available(iOSApplicationExtension 8.0, *)
+    @available(iOS 8.0, *)
+    
 public class RxSearchControllerDelegateProxy
     : DelegateProxy
     , DelegateProxyType
