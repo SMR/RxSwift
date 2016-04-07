@@ -11,8 +11,6 @@ import Foundation
     import RxSwift
 #endif
 
-typealias AtomicInt = Int32
-
 #if os(Linux)
   func AtomicIncrement(increment: UnsafeMutablePointer<AtomicInt>) -> AtomicInt {
       increment.memory = increment.memory + 1
@@ -23,9 +21,6 @@ typealias AtomicInt = Int32
       increment.memory = increment.memory - 1
       return increment.memory
   }
-#else
-  let AtomicIncrement = OSAtomicIncrement32
-  let AtomicDecrement = OSAtomicDecrement32
 #endif
 
 class RunLoopLock {
