@@ -16,6 +16,7 @@ import Foundation
 #endif
     import UIKit
     
+    @available(iOSApplicationExtension 8.0, *)
 extension UISearchController {
     /**
      Reactive wrapper for `delegate`.
